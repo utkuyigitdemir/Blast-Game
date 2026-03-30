@@ -721,7 +721,7 @@ MonoBehaviour:
   failPopup: {fileID: 1239340111}
   celebrationManager: {fileID: 1010066405}
   vfxManager: {fileID: 591911535}
-  fallSpeed: 8
+  fallDuration: 0.4
 --- !u!4 &848098203
 Transform:
   m_ObjectHideFlags: 0

@@ -43,7 +43,7 @@ namespace BlastGame.Board
         [SerializeField] private VFXManager vfxManager;
 
         [Header("Animation")]
-        [SerializeField] private float fallSpeed = 8f;
+        [SerializeField] private float fallDuration = 0.25f;
 
         public Cell[,] Grid { get; private set; }
         public LevelData CurrentLevelData { get; private set; }
@@ -737,8 +737,7 @@ namespace BlastGame.Board
                     if (move.Item == null) continue;
 
                     Vector3 targetPos = GetWorldPosition(move.X, move.ToY);
-                    float distance = move.FromY - move.ToY;
-                    float duration = distance / fallSpeed;
+                    float duration = fallDuration;
                     if (duration > maxDuration) maxDuration = duration;
 
                     move.Item.transform.DOKill(true);
@@ -767,8 +766,7 @@ namespace BlastGame.Board
                     Vector3 targetPos = GetWorldPosition(move.X, move.TargetY);
                     move.Item.transform.position = startPos;
 
-                    float distance = startPos.y - targetPos.y;
-                    float duration = (distance / cellSize) / fallSpeed;
+                    float duration = fallDuration;
                     if (duration > maxDuration) maxDuration = duration;
 
                     move.Item.transform.DOKill(true);
