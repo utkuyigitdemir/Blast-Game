@@ -1,6 +1,6 @@
-# Blast Game — Dream Games Intern Case Study
+# Blast Game
 
-A portrait 2D level-based blast game built in Unity as part of the Dream Games Software Engineering internship case study.
+A portrait 2D level-based blast game built in Unity.
 
 ## Gameplay
 
